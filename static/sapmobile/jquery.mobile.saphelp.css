@@ -1,0 +1,8 @@
+.ui-icon-saphelp {
+    background-image: url(sapsearchhelp.png);
+}
+
+table.ui-mobile-saphelp  { width:100%; border-spacing: 0; }
+table.ui-mobile-saphelp thead th { text-align:left; border-bottom-width:1px; border-top-width:1px; }
+table.ui-mobile-saphelp th, td { text-align:left; padding:6px;}
+table.ui-mobile-saphelp tbody tr {margin: 0; display: table-row; }

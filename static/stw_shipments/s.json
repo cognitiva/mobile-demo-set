@@ -1,0 +1,24 @@
+{
+    "shipments": [
+        {
+            "id": 1214,
+            "title": "1214 Rail Trans Inc.",
+            "description": "Route 000003 Eastern Route | Carrier SL2468"
+        },
+        {
+            "id": 1194,
+            "title": "1194 Italian Freight Company",
+            "description": "Route R00050 Berlin - Hamburg | Carrier SP33001"
+        },
+        {
+            "id": 1205,
+            "title": "1205 Rail Trans Inc.",
+            "description": "Route 000003 Eastern Route | Carrier SL2468"
+        },
+        {
+            "id": 1164,
+            "title": "1164 Atlantic Trucking Inc.",
+            "description": "Route CPB100 Bev Northern Route | Carrier SL5678"
+        }
+    ]
+}

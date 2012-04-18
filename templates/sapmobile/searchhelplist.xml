@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<searchhelp>
+    {% for item in results %}
+    <result>
+        {% for name, type, title in fields %}
+        <{{ name }} title="{{ title }}">{{ item[name] }}</{{ name }}>
+        {% end %}
+    </result>
+    {% end %}
+</searchhelp>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<searchhelp>
+	{% for name, datatype, description in fields %}
+	<field name="{{ name }}" datatype="{{ datatype }}">{{ description }}</field>
+	{% end %}
+</searchhelp>
+

@@ -13,6 +13,7 @@ SAP mobile sample applications using jQuery Mobile and Sencha Touch 2.
         jQuery Mobile version: lots of problems with scrolling
         Sencha Touch 2 version: works ok
 
+    Shipments
 
 
 See main.py for entry point URLs

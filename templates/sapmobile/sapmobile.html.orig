@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <title>SAP Shipments</title>
+
+   <link rel="stylesheet" type="text/css" 
+		 href="http://code.jquery.com/mobile/1.0rc3/jquery.mobile-1.0rc3.min.css" />
+   <link rel="stylesheet" type="text/css" 
+   	     href="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.css" />
+   <link rel="stylesheet" type="text/css" 
+         href="/static/mobiweaver/javascript/jquery.mobiweaver.searchhelp.css" /> 
+
+   <!--<script type="text/javascript"
+           src="http://code.jquery.com/jquery-1.6.4.min.js"></script>-->
+  <script type="text/javascript"
+           src="http://code.jquery.com/jquery-1.6.4.js"></script>
+   <!--<script type="text/javascript"
+           src="http://code.jquery.com/mobile/1.0rc3/jquery.mobile-1.0rc3.min.js"></script>-->
+   <script type="text/javascript"
+           src="http://code.jquery.com/mobile/1.0rc3/jquery.mobile-1.0rc3.js"></script>
+   <script type="text/javascript"
+           src="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.js"></script>
+   <script type="text/javascript"
+           src="http://dev.jtsage.com/cdn/datebox/i8n/jquery.mobile.datebox.i8n.en.js"></script>
+   <script type="text/javascript" src="/static/mobiweaver/javascript/jquery.mobiweaver.searchhelp.js"></script>
+   <script type="text/javascript" src="/static/sapmobile/sapmobile.js"></script>
+  
+</head>
+<body>
+
+<style>
+	ul#itemlist2 li p { margin-top: 0; }
+	p.dt { margin: 1em 0 !important; }
+</style>
+
+{% include "inc_selection.html" %}
+
+{% include "inc_list.html" %}
+
+{% include "inc_detail.html" %}
+
+{% include "inc_log.html" %}
+
+<div data-role="page" id="aboutPage" data-theme="a">
+	<div data-role="header">
+        <h1>About</h1>
+    </div>
+	<div data-role="content">
+		<p>SAP Shipment Monitor Mobile</p>
+		<p>HTML5 mobile app for monitoring shipments and setting status and log information. Built using SAP BSP and jQueryMobile.</p>
+		<p>&copy; Cognitiva 2011</p>
+	</div>
+</div>
+
+</body>
+</html>

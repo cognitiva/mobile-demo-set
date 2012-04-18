@@ -5,6 +5,7 @@ import os
 import tornado.web
 import tornado.wsgi
 import wsgiref.handlers
+import handlers
 from apps.mobibatchinfo import handlers as batchinfohandlers
 from apps.mobilauncher import handlers as launcherhandlers
 from apps.mobibase import handlers as basehandlers
@@ -23,6 +24,15 @@ application = tornado.wsgi.WSGIApplication([
   #mobile base
   (r'/sap/bc/bsp/sap/ymwbase/barcodescanner.js', basehandlers.StaticHandler, dict(filename='mobibase/barcodescanner.js')),
   (r'/sap/bc/bsp/sap/ymwbase/cordova.js', basehandlers.StaticHandler, dict(filename='mobibase/cordova.js')),
+  #shipments
+  (r'/sapmobiledemo', handlers.SapMobileDemo),  
+  (r'/sapmobile', handlers.SapMobile),
+  (r'/sapmobile/list', handlers.SapMobileList),
+  (r'/sapmobile/action', handlers.SapMobileAction),
+  (r'/sapmobile/log', handlers.SapMobileLog),
+  (r'/sapmobile/load', handlers.SapMobileLoad),
+  (r'/sapmobile/sh/fields', handlers.SearchHelpFields),
+  (r'/sapmobile/sh/search', handlers.SearchHelpList),
   #mobile launcher
   (r'/sap/bc/bsp/sap/ymwlauncher/index.do', launcherhandlers.Index),
   #mobile batchinfo
@@ -37,6 +47,7 @@ application = tornado.wsgi.WSGIApplication([
   # DEV:
   # /static/stweaver/index.html   <- launcher
   # /static/stw_batchinfo/index.html  <- batch info
+  # /static/stw_shipments/index.html  <- shipments
   # /static/dataview/index.html  <- data view
   # PROD:
   # /static/stweaver/build/production/index.html   <- launcher

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<shipmentlist>
+{% for shipment in shipments %}
+	<shipment>
+		{% for field in shipment.get_list_fields() %}
+			<{{ field[0] }}>{% if field[1] %}{{ field[1] }}{% end %}</{{ field[0] }}>
+		{% end %}
+	</shipment>
+{% end %}
+</shipmentlist>

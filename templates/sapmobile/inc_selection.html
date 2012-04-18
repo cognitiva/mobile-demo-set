@@ -1,0 +1,50 @@
+<div data-role="page" id="selectionPage">
+    <div data-role="header">
+        <h1>SAP Shipments</h1>
+		<a href="#aboutPage" data-icon="info" class="ui-btn-right" 
+		   data-rel="dialog" data-transition="slidedown">About</a>
+    </div>
+
+    <div data-role="content">
+        <form id="selectionform" method="get">
+        <!-- class="ui-hidden-accessible" -->
+        <fieldset>
+		
+		<div data-role="fieldcontain">
+			<label for="tknum">Shipment Num:</label>
+			<input id="tknum" type="text" name="tknum" data-role="saphelp" data-options='{"searchHelp": "sh_tknum", "resultField": "tknum"}'>
+		</div>
+
+		<div data-role="fieldcontain">
+			<label for="vsbed">Ship. Cond.</label>
+			<input id="vsbed" type="text" name="vsbed" data-role="saphelp" data-options='{"searchHelp": "sh_vsbed", "resultField": "tknum"}'>
+		</div>
+	
+        <div data-role="fieldcontain">
+            <label for="date">Date:</label>
+            <input id="date" type="date" name="date" value="2011-11-10" data-role="datebox"
+   data-options='{"mode": "calbox", "pickPageTheme": "a", "pickPageHighButtonTheme": "d"}'>
+        </div>
+
+        <div data-role="fieldcontain">
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+                <option value="">Choose status...</option>
+                <option value="0">Planned</option>
+                <option value="1">Planning completed</option>
+                <option value="2">Check-in</option>
+                <option value="3">Loading start</option>
+                <option value="4">Loading end</option>
+                <option value="5">Shipment completion</option>
+                <option value="6">Shipment start</option>
+                <option value="7">Shipment end</option>
+            </select>
+        </div>
+        </fieldset>
+        <fieldset>
+            <button type="submit" data-theme="a" data-icon="arrow-r" data-iconpos="right">List</button>
+        </fieldset>
+        </form>
+    </div>
+
+</div>

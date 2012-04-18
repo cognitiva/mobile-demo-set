@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<saphelpresults>
+    <result>
+        <nbr title="Number">4230498290</nbr>
+        <name title="Name">AAAAA</name>
+        <datum title="Date">2010-01-01</datum>
+    </result>
+    <result>
+        <nbr title="Number">8904689058</nbr>
+        <name title="Name">BBBBB</name>
+        <datum title="Date">2011-02-03</datum>
+    </result>
+    <result>
+        <nbr title="Number">5089503480</nbr>
+        <name title="Name">CCCCCC</name>
+        <datum title="Date">2013-04-05</datum>
+    </result>
+    <result>
+        <nbr title="Number">9584680</nbr>
+        <name title="Name">DDDDDDD</name>
+        <datum title="Date">2014-05-06</datum>
+    </result>
+</saphelpresults>
