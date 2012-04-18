@@ -1,0 +1,21 @@
+SAP mobile sample applications using jQuery Mobile and Sencha Touch 2.
+
+    Launcher
+        Application launcher. To use with mobiweaver-sconnect-android.
+
+    Batch Info
+        Needs to be launched from the PhoneGap app mobiweaver-sconnect-android 
+        in order to access the barcode scanner library and the mobile phone 
+        camera.
+
+    DataView
+        Table browser
+        jQuery Mobile version: lots of problems with scrolling
+        Sencha Touch 2 version: works ok
+
+
+
+See main.py for entry point URLs
+
+
+[1] - https://bitbucket.org/cogni/mobiweaver-sconnect-android/overview

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<error>
+{% if errors %}
+<ul name="errors">
+	{% for msg in errors %}
+  <li errortype="E">{{ msg }}</li>
+{% end %}
+</ul>
+{% end %}
+</error>

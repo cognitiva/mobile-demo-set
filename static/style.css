@@ -1,0 +1,77 @@
+body {
+	font-family:arial, helvetica, sans-serif;
+	font-size:.86em;
+	margin:0;
+	padding:0;
+	background: #EBEBEB;
+	color:#ffffff;
+}
+
+a,a:link,a:active,a:visited {
+	color:#666;
+}
+
+#header {
+		height:50px;
+		background:#D33432;
+		font-size:1.1em;
+		position:relative;
+		z-index:98;
+		}
+
+#splash { margin: 180px auto; padding: 0; width: 800px; text-align:center; }
+
+#header #logo { /* h1 or a, depending on context */
+			display:block;
+			width:217px;
+			height:32px;
+			text-indent:-999em;
+			overflow:hidden;
+			background:url(cognitiva_labs_red.png) no-repeat 32px 11px;
+			padding:11px 15px;
+			margin:0;
+	}
+
+#main {
+    width:968px;
+    margin:0 auto;
+}
+
+#content {
+	background:#fff;
+	color: #666;
+	margin:0 0 2px;
+}
+#subtitle {
+    padding: 16px;
+    background:#ddd;
+    border-bottom: 1px solid #ccc;
+    color: #000;
+}
+
+#featured {
+    padding: 32px 0 16px 0;
+	position: relative !important;
+	width: 968px !important;
+	height: 360px !important;
+	border-bottom: 1px solid #ddd;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+#featuredmap {
+    padding: 32px 0 16px 0;
+	position: relative !important;
+	width: 968px !important;
+	height: 460px !important;
+	border-bottom: 1px solid #ddd;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.productsection {
+    padding:16px;
+    border-bottom: 1px solid #ddd;
+}
+
+h3 { color: #D33432; }

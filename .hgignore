@@ -1,0 +1,17 @@
+syntax: regexp
+^gaebar/backups
+
+syntax: glob
+.svn
+.DS_Store
+Crypto
+*.pyc
+*~
+static/stweaver/sdk/*
+static/stweaver/archive/*
+static/stw_batchinfo/sdk/*
+static/stw_batchinfo/archive/*
+static/stw_docflow/sdk/*
+static/stw_docflow/archive/*
+static/stw_shipments/sdk/*
+static/stw_shipments/archive/*

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Main Page -->
+<div data-role="page" data-theme="b" id="home">
+  <div data-role="header" data-theme="a">
+      <h1>Document Flow</h1>
+      <a href="/sap/bc/bsp/sap/ymwlauncher/index.do" data-icon="home"
+           data-role="button" data-ajax="false">Home</a>
+  </div>
+  <div data-role="content">
+  <div id="scanbtnwrap">
+  <center>
+    <a id="scanbtn" href="" data-role="button">Scan Document</a>
+  </center>
+        </div>
+  </div>
+</div><!-- /Main Page -->
+
+<!-- Message -->
+<div data-role="dialog" data-theme="b" id="message">
+  <div data-role="header" data-theme="a">
+    <h1>&nbsp;</h1>
+  </div>
+  <div data-role="content">
+    <p id="alert_message"></p>
+    <a id="okbtn" href="" data-role="button" data-theme="c"><center>OK</center></a>
+  </div>
+  <div data-role="footer" data-theme="a">
+  </div>
+</div><!-- /Message -->
+
+<!-- About -->
+<div data-role="page" id="aboutPage" data-theme="a">
+  <div data-role="header">
+        <h1>About</h1>
+    </div>
+  <div data-role="content">
+    <p>SAP Document Flow Viewer</p>
+    <p>HTML5 mobile app for viewing document flow information. Built using SAP BSP and jQueryMobile.</p>
+    <p>&copy; Cognitiva 2011-2012</p>
+  </div>
+</div>
+
+{% end %}

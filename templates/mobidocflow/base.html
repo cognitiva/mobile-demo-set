@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Document Flow</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+  <meta charset="utf-8">
+
+  <!-- iPad/iPhone specific css below, add after your main css >
+  <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />
+  -->
+  <!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+  <script src="http://code.jquery.com/jquery-1.6.4.js"></script>
+  <script src="http://cogni.bitbucket.org/mobiweaver/jquery.mobile-1.0.mobiweaver.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="/sap/bc/bsp/sap/ymwbase/cordova.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/sap/bc/bsp/sap/ymwbase/barcodescanner.js"></script>
+  <script type="text/javascript" charset="utf-8" src="docflow.js"></script>
+
+  <style>
+  #scanbtnwrap { position: absolute; top: 50%; left: 50%; margin-top: -1.2em; width: 300px; margin-left: -150px; }
+  </style>
+  </head>
+  <body>
+	
+{% block content %}{% end %}
+
+  </body>
+</html>

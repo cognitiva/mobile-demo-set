@@ -1,0 +1,13 @@
+@2012 Cognitiva
+
+Experimental app with Sencha Touch 2 integrated with SAP using BSP. Application flow:
+
+- reads a barcode (needs a phonegap client with the barcode plugin installed)
+- call SAP to get the batch information
+- displays the batch information
+  - if the batch is blocked displays a button to unblock
+  - if the batch is unblocked displays a button to block
+- if a button is pressed the action (block/unblock) is called in SAP and the information refreshed
+
+
+

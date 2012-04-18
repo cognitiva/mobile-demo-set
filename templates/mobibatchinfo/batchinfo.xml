@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<ul>
+{% if mchb %}
+<li name="matnr" description="Material">{{ mchb.matnr }}</li>
+<li name="werks" description="Plant">{{ mchb.werks }}</li>
+<li name="lgort" description="Storage Loc.">{{ mchb.lgort }}</li>
+<li name="charg" description="Batch">{{ mchb.charg }}</li>
+<li name="laeda" description="Last Change">{{ mchb.laeda }}</li>
+<li name="aenam" description="Last Person">{{ mchb.aenam }}</li>
+<li name="sperc" description="PI Blocked">{{ mchb.sperc }}</li>
+<li name="clabs" description="Unrestricted Qty">{{ mchb.clabs }}</li>
+<li name="cumlm" description="In Transfer Qty">{{ mchb.cumlm }}</li>
+<li name="cinsm" description="QI Qty">{{ mchb.cinsm }}</li>
+<li name="cspem" description="Blocked Qty">{{ mchb.cspem }}</li>
+<li name="meins" description="Unit">{{ mchb.meins }}</li>
+{% end %}
+</ul>

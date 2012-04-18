@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+  <meta charset="utf-8">
+
+  <!-- iPad/iPhone specific css below, add after your main css >
+  <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />
+  -->
+
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+  <script src="http://code.jquery.com/jquery-1.6.4.js"></script>
+  <script src="http://cogni.bitbucket.org/mobiweaver/jquery.mobile-1.0.mobiweaver.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="/sap/bc/bsp/sap/ymwbase/cordova.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/sap/bc/bsp/sap/ymwbase/barcodescanner.js"></script>
+  <script type="text/javascript" charset="utf-8" src="batchinfo.js"></script>
+
+  <style>
+  #scanbtnwrap { position: absolute; top: 50%; left: 50%; margin-top: -1.2em; width: 300px; margin-left: -150px; }
+  </style>
+  </head>
+  <body>
+
+<!-- Main Page -->
+<div data-role="page" data-theme="b" id="home">
+  <div data-role="header" data-theme="a">
+      <h1>Batch Info</h1>
+      <a href="/sap/bc/bsp/sap/ymwlauncher/index.do" data-icon="home"
+           data-role="button" data-ajax="false">Home</a>
+      <a href="#settings" data-icon="gear" data-role="button" class="ui-btn-right">Setup</a>
+        </div>
+  <div data-role="content">
+  <div id="scanbtnwrap">
+  <center>
+    <a id="scanbtn" href="" data-role="button">Scan Batch</a>
+  </center>
+        </div>
+  </div>
+</div><!-- /Main Page -->
+
+<!-- Batch details -->
+<div data-role="page" data-theme="b" id="batch">
+  <div data-role="header" data-theme="a">
+    <a href="#home" data-icon="arrow-l">Back</a>
+    <h1>Batch details</h1>
+  </div>
+  <div data-role="content">
+    <div id="batchcontent">
+    </div>
+    <div id="statusbtn">
+      <center><a id="blockbatch" data-role="button" style="display:none">Block Batch</a></center>
+      <center><a id="unblockbatch" data-role="button" style="display:none">Unblock Batch</a></center>
+    </div>
+  </div>
+</div><!-- /Batch details -->
+
+<!-- Settings -->
+<div data-role="page" data-theme="b" id="settings">
+  <div data-role="header" data-theme="a">
+    <a href="#home" data-icon="arrow-l">Back</a>
+    <h1>Settings</h1>
+    <span id="savebtn" data-role="button" data-icon="check" class="ui-btn-right">Save</span>
+  </div>
+  <div data-role="content">
+    <form action="#" method="get">
+      <label for="password">Default Plant:</label>
+      <input type="text" id="plant" name="plant" value="1100">
+    </form>
+  </div>
+</div><!-- /Settings -->
+
+<!-- Message -->
+<div data-role="dialog" data-theme="b" id="message">
+  <div data-role="header" data-theme="a">
+    <h1>&nbsp;</h1>
+  </div>
+  <div data-role="content">
+    <p id="alert_message"></p>
+    <a id="okbtn" href="" data-role="button" data-theme="c"><center>OK</center></a>
+  </div>
+  <div data-role="footer" data-theme="a">
+  </div>
+</div><!-- /Message -->
+
+  </body>
+</html>

@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div data-role="page" id="detailPage" data-theme="a">
+<style>
+.right_align { text-align:right; }
+</style>
+<div data-role="header" data-position="inline">
+	<h1>Doc. {{ docnum }} / {{ docitem }} </h1>
+	<a href="/sap/bc/bsp/sap/ymwdocflow/index.html" data-icon="forward"
+           data-role="button" data-ajax="false">New Scan</a>
+</div>
+<div data-role="content">
+	<ul data-role="listview" data-inset="true" data-theme="a" >
+	{% if doctype == 'C' %}
+	  <li data-role="list-divider">Sales Order</li>
+	  <li><p>Sold-to</p>
+	      <p class="ui-li-aside">{{ vbak.kunnr }} {{ util.custname(vbak.kunnr) }}</p>
+	  </li>
+	  <li><p>Material</p>
+	      <p class="ui-li-aside">{{ vbak.matnr }} {{ util.matktx(vbak.matnr) }}</p>
+	  </li>
+	  <li><p>Qty</p>
+	      <p class="ui-li-aside">{{ vbap.kwmeng }} {{ vbap.vrkme }}</p>
+	  </li>
+	  <li><p>Net price</p>
+	      <p class="ui-li-aside">{{ vbap.netpr }} {{ vbap.waerk }}</p>
+	  </li>
+	  <li><p>Route</p>
+	      <p class="ui-li-aside">{{ vbap.route }}</p>
+	  </li>
+	  <li><p>Created by</p>
+	      <p class="ui-li-aside">{{ vbap.ernam }}</p>
+	  </li>
+	  <li><p>Created on</p>
+	      <p class="ui-li-aside">{{ util.date_format(vbap.erdat) }}</p>
+	  </li>
+	  <li><p>Overall status</p>
+	      <p class="ui-li-aside">{{ util.domain_desc('STATV', vbuk.gbstk) }}</p>
+	  </li>
+	  <li><p>Delivery status</p>
+	      <p class="ui-li-aside">{{ util.domain_desc('STATV', vbuk.lfstk) }}</p>
+	  </li>
+	  <li><p>Credit status</p>
+	      <p class="ui-li-aside">{{ util.domain_desc('CMGST', vbuk.cmgst) }}</p>
+	  </li>
+	{% end %}
+	
+	{% if doctype == 'J' %}
+	  <li data-role="list-divider">Delivery</li>
+	  <li><p>Ship. Point</p>
+	      <p class="ui-li-aside">{{ likp.vstel }}</p>
+	  </li>
+	  <li><p>Route </p>
+	      <p class="ui-li-aside">{{ likp.route }}</p>
+	  </li>
+	  <li><p>Material </p>
+	      <p class="ui-li-aside">{{ lips.matnr }} {{ utils.maktx(lips.matnr) }}</p>
+	  </li>
+	  <li><p>Qty </p>
+	      <p class="ui-li-aside">{{ lips.lfimg }} {{ lips.vrkme }}</p>
+	  </li>
+	  <li><p>GI date </p>
+	      <p class="ui-li-aside">{{ util.date_format( likp.wadat_ist) }}</p>
+	  </li>
+	  <li><p>Sales Org. </p>
+	      <p class="ui-li-aside">{{ likp.vkorg }}</p>
+	  </li>
+	  <li><p>Created by </p>
+	      <p class="ui-li-aside">{{ likp.ernam }}</p>
+	  </li>
+	  <li><p>Created on </p>
+	      <p class="ui-li-aside">{{ utils.date_format(likp.erdat) }}</p>
+	  </li>
+	{% end %}
+	{% if doctype == 'R' %}
+	<li data-role="list-divider">Goods Issue</li>
+	  <li><p>Date </p>
+	      <p class="ui-li-aside">{{ utils.date_format(mkpf.budat) }}</p>
+	  </li>
+	  <li><p>Material </p>
+	      <p class="ui-li-aside">{{ mseg.matnr }} {{ utils.maktx(mseg.matnr) }}</p>
+	  </li>
+	  <li><p>Qty </p>
+	      <p class="ui-li-aside">{{ mseg.erfmg }} {{ mseg.erfme }}</p>
+	  </li>
+
+	  <li><p>Created by </p>
+	      <p class="ui-li-aside">{{ mkpf.usnam }}</p>
+	  </li>
+	  <li><p>Created on </p>
+	      <p class="ui-li-aside">{{ utils.date_format(mkpf.cpudt) }}</p>
+	  </li>
+	{% end %}
+	{% if doctype == 'M' %}
+	<li data-role="list-divider">Invoice</li>
+	  <li><p>Date </p>
+	      <p class="ui-li-aside">{{ utils.date_format(vbrk.fkdat) }}</p>
+	  </li>
+	  <li><p>Value </p>
+	      <p class="ui-li-aside">{{ vbrk.netwr }} {{ vbrk.waerk }}</p>
+	  </li>
+
+	  <li><p>Material </p>
+	      <p class="ui-li-aside">{{ vbrp.matnr }} {{ utils.maktx(vbrp.matnr) }}</p>
+	  </li>
+	  <li><p>Qty </p>
+	      <p class="ui-li-aside">{{ vbrp.fkimg }} {{ vbrp.vrkme }}</p>
+	  </li>
+	  <li><p>Payment Terms </p>
+	      <p class="ui-li-aside">{{ vbrk.zterm }}</p>
+	  </li>
+	  <li><p>Sales Area </p>
+	      <p class="ui-li-aside">{{ vbrk.vkorg }}/{{ vbrk.vtweg }}/{{ vbrk.spart }}</p>
+	  </li>
+	  <li><p>Created by </p>
+	      <p class="ui-li-aside">{{ vbrk.ernam }}</p>
+	  </li>
+	  <li><p>Created on </p>
+	      <p class="ui-li-aside">{{ utils.date_format(vbrk.erdat) }}</p>
+	  </li>
+	{% end %}
+
+	</ul>
+	<p>&nbsp;</p>
+	<ul id="itemlist2" data-role="listview" data-theme="a" >
+	<li data-role="list-divider">Document Flow</li>
+	
+{% for vbfa in vbfatab %}
+	{% if vbfa.vbtyp_n == 'C' %}
+
+	<li><a href="?doc=C&num={{ vbfa.vbeln }}&item={{ vbfa.posnn }}" >
+	<h3><div class="ui-grid-a"><div class="ui-block-a">Sales</div>
+	<div class="ui-block-b right_align">
+		{{ utils.strip(vbfa.vbeln) }}/{{ utils.strip(vbfa.posnn) }}&nbsp;</div>
+	</div></h3>
+	<p>{{ utils.date_format(vbfa.erdat) }} | {{ vbfa.rfmng }} {{ vbfa.meins }}  | {{ vbfa.rfwrt }} {{ vbfa.waers }}
+	</p>
+	</a></li>
+	
+	{% elseif vbfa.vbtyp_n == 'J' %}
+
+	<li><a href="?doc=J&num={{ vbfa.vbeln }}&item={{ vbfa.posnn }}" >
+	<h3><div class="ui-grid-a"><div class="ui-block-a">Delivery</div>
+	<div class="ui-block-b right_align">
+		{{ utils.strip(vbfa.vbeln) }}/{{ utils.strip(vbfa.posnn) }}&nbsp;</div>
+	</div></h3>
+	<p>{{ utils.date_format(vbfa.erdat) }} | {{ vbfa.rfmng }} {{ vbfa.meins }}
+	</p>
+	</a></li>
+	
+	{% elseif vbfa.vbtyp_n == 'R' %}
+
+	<li><a href="?doc=R&num={{ vbfa.vbeln }}&item={{ vbfa.posnn }}">
+	<h3><div class="ui-grid-a"><div class="ui-block-a">Goods movement</div>
+	<div class="ui-block-b right_align">
+		{{ utils.strip(vbfa.vbeln) }}/{{ utils.strip(vbfa.posnn) }}&nbsp;</div>
+	</div></h3>
+	<p>{{ utils.date_format(vbfa.erdat) }} | {{ vbfa.rfmng }} {{ vbfa.meins }} 
+	</p>
+	</a></li>
+	
+	{% elseif vbfa.vbtyp_n == 'M' %}
+
+	<li><a href="?doc=M&num={{ vbfa.vbeln }}&item={{ vbfa.posnn }}">
+	<h3><div class="ui-grid-a"><div class="ui-block-a">Invoice </div>
+	<div class="ui-block-b right_align">
+		{{ utils.strip(vbfa.vbeln) }}/{{ utils.strip(vbfa.posnn) }}&nbsp;</div>
+	</div></h3>
+	<p>{{ utils.date_format(vbfa.erdat) }} | {{ vbfa.rfmng }} {{ vbfa.meins }} | {{ vbfa.rfwrt }} {{ vbfa.waers }} 
+	</p>
+	</a></li>
+	
+	{% end %}
+{% end %}
+	</ul>
+	</div>
+</div>
+	
+{% endblock %}

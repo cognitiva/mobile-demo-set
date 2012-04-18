@@ -1,0 +1,4 @@
+#!/bin/sh
+DIR=$(dirname $(which $0))
+export NODE_PATH=/usr/lib/node_modules
+nodejs --debug-brk $DIR/sencha.js $*
